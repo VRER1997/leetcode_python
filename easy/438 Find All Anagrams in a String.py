@@ -5,3 +5,4 @@ class Solution:
         :type p: str
         :rtype: List[int]
         """
+        
