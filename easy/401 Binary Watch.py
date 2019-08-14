@@ -16,8 +16,8 @@ class Solution:
 
     def read(self, num, type):
         ret = []
-        if type == 0: r = 16
-        else: r = 64
+        if type == 0: r = 12
+        else: r = 60
         for i in range(r):
             if self.readCountOne(i) == num:
                 t = str(i)
@@ -35,4 +35,4 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    print(s.readBinaryWatch(1))
+    print(s.readBinaryWatch(10))

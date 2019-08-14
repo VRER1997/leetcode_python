@@ -4,8 +4,10 @@ class Solution:
         :type n: int
         :rtype: int
         """
-        now = 1
-        while n > len(str(now)):
-            n -= len(str(now))
-            now += 1
-        return int(str(now)[n-1])
+        for i in range(9):
+            d = 9 * 10 ** i
+            if n < d*(i+1):
+                break
+            n -= d * (i+1)
+        n -= 1
+        return int(str(10**i + n/(i+1))[n%(i+1)])
